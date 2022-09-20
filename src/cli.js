@@ -7,4 +7,4 @@ const getUserName = () => {
 };
 
 
-export  {userName};
+export  {getUserName};
