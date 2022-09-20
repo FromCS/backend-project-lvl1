@@ -5,11 +5,7 @@ import { printGcdRules, getGcdQuestion, getGcdCorrectAnswer } from '../games/bra
 import { printProgressionRules, createRandomProgression, getProgressionQuestion, getProgressionCorrectAnswer } from '../games/brain-progression-code.js';
 import { printPrimeRules, getPrimeQuestion, getPrimeCorrectAnswer } from '../games/brain-prime-code.js'
 
-const brainGames = (gameName) => {
-    console.log('Welcome to the Brain Games!');
-    const userName = readlineSync.question('May I have your name? ');
-    console.log(`Hi, ${userName}!`);
-    
+const printRules = (gameName) => {
     switch (gameName) {
         case 'brainEven':
             printEvenRules();
@@ -29,45 +25,61 @@ const brainGames = (gameName) => {
 
         case 'brainPrime':
             printPrimeRules();
+            break;
     }
+};
+
+const getQuestion = (gameName) => {
+    switch (gameName) {
+        case 'brainEven':
+            return getEvenQuestion();
+            
+        case 'brainCalc':
+            return getCalcQuestion();
+           
+        case 'brainGcd':
+            return getGcdQuestion();
+            
+        case 'brainProgression':
+            const progression = createRandomProgression();
+            return getProgressionQuestion(progression);
+            
+        case 'brainPrime':
+            return getPrimeQuestion();            
+    }
+};
+
+const getCorrectAnswer = (gameName, task) => {
+    switch (gameName) {
+        case 'brainEven':
+            return getEvenCorrectAnswer(task);           
+        
+        case 'brainCalc':
+            return getCalcCorrectAnswer(task);
+            
+        case 'brainGcd':
+            return getGcdCorrectAnswer(task).toString();
+            
+        case 'brainProgression':
+            return String(getProgressionCorrectAnswer(task));
+            
+        case 'brainPrime':
+            return getPrimeCorrectAnswer(task);
+    }
+};
+
+const brainGames = (gameName) => {
+    console.log('Welcome to the Brain Games!');
+    const userName = readlineSync.question('May I have your name? ');
+    console.log(`Hello, ${userName}!`);
+    
+    printRules(gameName);
     
     let isWinning = true;
     for (let i = 0; i < 3; i += 1) {
-        let question;
-        let correctAnswer;
-        switch (gameName) {
-            case 'brainEven':
-                question = getEvenQuestion();
-                correctAnswer = getEvenCorrectAnswer(question);
-                console.log(`Question: ${question}`);
-                break;
-            
-            case 'brainCalc':
-                question = getCalcQuestion();
-                correctAnswer = getCalcCorrectAnswer(question);
-                console.log(`Question: ${question}`);
-                break;
-
-            case 'brainGcd':
-                question = getGcdQuestion();
-                correctAnswer = getGcdCorrectAnswer(question).toString();
-                console.log(`Question: ${question}`);
-                break;
-
-            case 'brainProgression':
-                const progression = createRandomProgression();
-                question = getProgressionQuestion(progression);
-                correctAnswer = String(getProgressionCorrectAnswer(progression, question));
-                console.log(`Question: ${question}`);
-                break;
-
-            case 'brainPrime':
-                question = getPrimeQuestion();
-                correctAnswer = getPrimeCorrectAnswer(question);
-                console.log(`Question: ${question}`);
-                break;
-        }
-
+        let question = getQuestion(gameName);
+        let correctAnswer = getCorrectAnswer(gameName, question);
+        console.log(`Question: ${question}`);
         const userAnswer = readlineSync.question('Your answer: ');
         if (correctAnswer === userAnswer) {
             console.log('Correct!');
@@ -77,12 +89,10 @@ const brainGames = (gameName) => {
             isWinning = false;
             break;
         }
-    
     }
-
     if (isWinning) {
         console.log(`Congratulations, ${userName}!`);
-    }
-}
+    }    
+};
 
-export {brainGames};
+export {brainGames, printRules, getQuestion, getCorrectAnswer};
