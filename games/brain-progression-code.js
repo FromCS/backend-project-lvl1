@@ -13,7 +13,7 @@ const createRandomProgression = () => {
 };
 
 const getProgressionQuestion = (coll) => {
-    const randomIndex = Math.floor(Math.random()*coll.length) - 1;
+    const randomIndex = Math.floor(Math.random()*(coll.length - 1));
     const question = [];
     for (let i = 0; i < coll.length; i += 1) {
         if (i === randomIndex) {
@@ -26,18 +26,20 @@ const getProgressionQuestion = (coll) => {
     return question.join(', ');
 };
 
-const getProgressionCorrectAnswer = (coll, task) => {
+const getProgressionCorrectAnswer = (task) => {
     let taskColl = task.split(', ');
-    let indexHiddenNumber;
-    for (let i = 0; i < task.length; i += 1) {
+    let hiddenNumber;
+    for (let i = 0; i < taskColl.length; i += 1) {
         if (taskColl[i] === '..') {
-            indexHiddenNumber = i;
-            break;
+            if (i >= taskColl.length - 2) {
+                const increaseNumber = Number(taskColl[i-1]) - Number(taskColl[i-2]);
+                return hiddenNumber = Number(taskColl[i-1]) + increaseNumber;
+            } else {
+                const increaseNumber = Number(taskColl[i+2]) - Number(taskColl[i+1]);
+                return hiddenNumber = taskColl[i+1] - increaseNumber;
+            }
         }
     }
-    
-    const hiddenNumber = coll[indexHiddenNumber];
-    return hiddenNumber;
 };
 
 export {printProgressionRules, createRandomProgression, getProgressionQuestion, getProgressionCorrectAnswer};
