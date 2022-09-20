@@ -58,10 +58,10 @@ const getCorrectAnswer = (gameName, task) => {
             return getCalcCorrectAnswer(task);
             
         case 'brainGcd':
-            return getGcdCorrectAnswer(task).toString();
+            return getGcdCorrectAnswer(task);
             
         case 'brainProgression':
-            return String(getProgressionCorrectAnswer(task));
+            return getProgressionCorrectAnswer(task);
             
         case 'brainPrime':
             return getPrimeCorrectAnswer(task);
