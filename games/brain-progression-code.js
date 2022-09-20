@@ -2,7 +2,7 @@ const printProgressionRules = () => console.log('What number is missing in the p
 
 const createRandomProgression = () => {
     let progressionLength = 10;
-    let firstNumber = Math.round(Math.random()*100);
+    let firstNumber = Math.round(Math.random()*100) + 2;
     let progression = [firstNumber];
     let randomIncrease = Math.round(Math.random()*20) + 1;
     for (let i = 1; i < progressionLength; i += 1) {
@@ -23,11 +23,11 @@ const getProgressionQuestion = (coll) => {
         }
     }
 
-    return question.join(', ');
+    return question.join(' ');
 };
 
 const getProgressionCorrectAnswer = (task) => {
-    let taskColl = task.split(', ');
+    let taskColl = task.split(' ');
     let hiddenNumber;
     for (let i = 0; i < taskColl.length; i += 1) {
         if (taskColl[i] === '..') {
