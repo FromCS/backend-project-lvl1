@@ -35,48 +35,62 @@ const printRules = (gameName) => {
 };
 
 const getQuestion = (gameName) => {
+  let task;
   const progression = createRandomProg();
   switch (gameName) {
     case 'brainEven':
-      return getEvenQuestion();
+      task = getEvenQuestion();
+      break;
 
     case 'brainCalc':
-      return getCalcQuestion();
+      task = getCalcQuestion();
+      break;
 
     case 'brainGcd':
-      return getGcdQuestion();
+      task = getGcdQuestion();
+      break;
 
     case 'brainProgression':
-      return getProgQuestion(progression);
+      task = getProgQuestion(progression);
+      break;
 
     case 'brainPrime':
-      return getPrimeQuestion();
+      task = getPrimeQuestion();
+      break;
 
     default:
       console.log('Unknown command');
   }
+  return task;
 };
 
 const getCorrectAnswer = (gameName, task) => {
+  let answer;
   switch (gameName) {
     case 'brainEven':
-      return getEvenCorrectAnswer(task);
+      answer = getEvenCorrectAnswer(task);
+      break;
 
     case 'brainCalc':
-      return getCalcCorrectAnswer(task);
+      answer = getCalcCorrectAnswer(task);
+      break;
 
     case 'brainGcd':
-      return getGcdCorrectAnswer(task);
+      answer = getGcdCorrectAnswer(task);
+      break;
 
     case 'brainProgression':
-      return getProgCorrectAnswer(task);
+      answer = getProgCorrectAnswer(task);
+      break;
 
     case 'brainPrime':
-      return getPrimeCorrectAnswer(task);
+      answer = getPrimeCorrectAnswer(task);
+      break;
 
     default:
       console.log('Unknow command');
   }
+  return answer;
 };
 
 const brainGames = (gameName) => {
