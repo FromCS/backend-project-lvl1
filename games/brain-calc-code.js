@@ -9,9 +9,24 @@ const getCalcQuestion = () => {
   return expression;
 };
 
+const getExpressionResult = (firstNumber, operation, secondNumber) => {
+  let result;
+  if (operation === '+') {
+    result = Number(firstNumber) + Number(secondNumber);
+  } else if (operation === '-') {
+    result = firstNumber - secondNumber;
+  } else if (operation === '*') {
+    result = firstNumber * secondNumber;
+  }
+  return result;
+};
+
 const getCalcCorrectAnswer = (task) => {
-  const correctAnswer = eval(task).toString();
-  return correctAnswer;
+  const taskColl = task.split(' ');
+  const [firstNumber, operation, secondNumber] = taskColl;
+  console.log(operation);
+  const correctAnswer = getExpressionResult(firstNumber, operation, secondNumber);
+  return correctAnswer.toString();
 };
 
 export { printCalcRules, getCalcQuestion, getCalcCorrectAnswer };
