@@ -34,13 +34,14 @@ const getProgCorrectAnswer = (task) => {
       if (i >= taskColl.length - 2) {
         const increaseNumber = Number(taskColl[i - 1]) - Number(taskColl[i - 2]);
         hiddenNumber = Number(taskColl[i - 1]) + increaseNumber;
-        return String(hiddenNumber);
+        break;
       }
       const increaseNumber = Number(taskColl[i + 2]) - Number(taskColl[i + 1]);
       hiddenNumber = taskColl[i + 1] - increaseNumber;
-      return String(hiddenNumber);
+      break;
     }
   }
+  return hiddenNumber.toString();
 };
 
 export {
