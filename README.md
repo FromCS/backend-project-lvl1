@@ -1,6 +1,14 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/FromCS/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/FromCS/backend-project-lvl1/actions)
 
+How to Launch games:
+    brain-even: make brain-even;
+    brain-calc: make brain-calc;
+    brain-gcd: make brain-gcd;
+    brain-progression: make brain-progression;
+    brain-prime: make brain-prime;
+
+
 
 Шаг №4: <a href="https://codeclimate.com/github/FromCS/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/25443f45b160cddde125/maintainability" /></a>
 
