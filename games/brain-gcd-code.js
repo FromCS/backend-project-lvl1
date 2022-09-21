@@ -11,6 +11,7 @@ const getGcdCorrectAnswer = (task) => {
   const numbers = task.split(' ');
   const [firstNumber, secondNumber] = numbers;
   const firstNumberDivisors = [];
+  let answer;
   for (let i = Number(firstNumber); i >= 1; i -= 1) {
     if (firstNumber % i === 0) {
       firstNumberDivisors.push(i);
@@ -18,9 +19,11 @@ const getGcdCorrectAnswer = (task) => {
   }
   for (let j = Number(secondNumber); j >= 1; j -= 1) {
     if ((Number(secondNumber) % j === 0) && firstNumberDivisors.includes(j)) {
-      return String(j);
+      answer = j;
+      break;
     }
   }
+  return String(answer);
 };
 
 export { printGcdRules, getGcdQuestion, getGcdCorrectAnswer };
