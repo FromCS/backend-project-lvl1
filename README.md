@@ -5,9 +5,12 @@
 <a href="https://codeclimate.com/github/FromCS/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/25443f45b160cddde125/maintainability" /></a>
 
 
-How to Install: **make install**
+## How to Install:
+```bash
+make install
+```  
 
-How to Launch our games:  
+## How to Launch our games:  
 brain-even: 
 ```bash
 make brain-even
@@ -29,7 +32,7 @@ brain-prime:
 make brain-prime
 ```  
 
-What are our games:  
+## What are our games:  
 brain-even: [![asciicast](https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6.svg)](https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6)  
 
 brain-calc: [![asciicast](https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF.svg)](https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF)  
