@@ -1,24 +1,22 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/FromCS/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/FromCS/backend-project-lvl1/actions)
 
-How to Launch games:
-    brain-even: make brain-even;
-    brain-calc: make brain-calc;
-    brain-gcd: make brain-gcd;
-    brain-progression: make brain-progression;
-    brain-prime: make brain-prime;
+
+<a href="https://codeclimate.com/github/FromCS/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/25443f45b160cddde125/maintainability" /></a>
 
 
+How to Install: **npm install brain-games**
 
-Шаг №4: <a href="https://codeclimate.com/github/FromCS/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/25443f45b160cddde125/maintainability" /></a>
+How to Launch our games:
+brain-even: *make brain-even*
+brain-calc: *make brain-calc*
+brain-gcd: *make brain-gcd*
+brain-progression: *make brain-progression*
+brain-prime: *make brain-prime*
 
-Шаг №5: https://asciinema.org/a/ByFg7qagVnB4i8D9h3LVcQtpK
-
-Шаг №6: https://asciinema.org/a/aM9GWhKRT4R4ica51ipbNnE6r
-
-Шаг №7: https://asciinema.org/a/Yu2LawIpDjmjToBTakWQZlYYU
-
-Шаг №8: https://asciinema.org/a/WIHjYsnKgYiZMmb34BXCY4229
-
-Шаг №9: https://asciinema.org/a/hRFWoNIswpyo4j1NxzBdq64Ln
-
+What are our games:
+brain-even: <script id="asciicast-qcBLTfsuX3SOY5uAYqd0zTzs6" src="https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6.js" async></script>
+brain-calc: <script id="asciicast-kphhjcR9Sq1tfth9HXKO8DSdF" src="https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF.js" async></script>
+brain-gcd: <script id="asciicast-ibIScbV2diJ10DbZVZXtmYgP1" src="https://asciinema.org/a/ibIScbV2diJ10DbZVZXtmYgP1.js" async></script>
+brain-progression: <script id="asciicast-Ycf8Pzy9SAKnMP9vOcMLBTSrk" src="https://asciinema.org/a/Ycf8Pzy9SAKnMP9vOcMLBTSrk.js" async></script>
+brain-prime: <script id="asciicast-hwE2VBrs0tfKhtWMEZCPIuqY7" src="https://asciinema.org/a/hwE2VBrs0tfKhtWMEZCPIuqY7.js" async></script>
