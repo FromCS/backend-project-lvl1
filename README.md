@@ -5,17 +5,31 @@
 <a href="https://codeclimate.com/github/FromCS/backend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/25443f45b160cddde125/maintainability" /></a>
 
 
-How to Install: **npm install brain-games**
+How to Install: **make install**
 
 How to Launch our games:  
-brain-even: *make brain-even*  
-brain-calc: *make brain-calc*  
-brain-gcd: *make brain-gcd*  
-brain-progression: *make brain-progression*  
-brain-prime: *make brain-prime*  
+brain-even: 
+```bash
+make brain-even
+```  
+brain-calc:
+```bash
+make brain-calc
+```  
+brain-gcd:
+```bash
+make brain-gcd
+```  
+brain-progression: 
+```bash
+make brain-progression
+```  
+brain-prime:
+```bash
+make brain-prime
+```  
 
 What are our games:  
-
 brain-even: [![asciicast](https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6.svg)](https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6)  
 
 brain-calc: [![asciicast](https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF.svg)](https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF)  
