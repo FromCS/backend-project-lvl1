@@ -7,16 +7,22 @@
 
 How to Install: **npm install brain-games**
 
-How to Launch our games:
-brain-even: *make brain-even*
-brain-calc: *make brain-calc*
-brain-gcd: *make brain-gcd*
-brain-progression: *make brain-progression*
-brain-prime: *make brain-prime*
+How to Launch our games:  
+brain-even: *make brain-even*  
+brain-calc: *make brain-calc*  
+brain-gcd: *make brain-gcd*  
+brain-progression: *make brain-progression*  
+brain-prime: *make brain-prime*  
 
-What are our games:
-brain-even: <script id="asciicast-qcBLTfsuX3SOY5uAYqd0zTzs6" src="https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6.js" async></script>
-brain-calc: <script id="asciicast-kphhjcR9Sq1tfth9HXKO8DSdF" src="https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF.js" async></script>
-brain-gcd: <script id="asciicast-ibIScbV2diJ10DbZVZXtmYgP1" src="https://asciinema.org/a/ibIScbV2diJ10DbZVZXtmYgP1.js" async></script>
-brain-progression: <script id="asciicast-Ycf8Pzy9SAKnMP9vOcMLBTSrk" src="https://asciinema.org/a/Ycf8Pzy9SAKnMP9vOcMLBTSrk.js" async></script>
-brain-prime: <script id="asciicast-hwE2VBrs0tfKhtWMEZCPIuqY7" src="https://asciinema.org/a/hwE2VBrs0tfKhtWMEZCPIuqY7.js" async></script>
+What are our games:  
+
+brain-even: [![asciicast](https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6.svg)](https://asciinema.org/a/qcBLTfsuX3SOY5uAYqd0zTzs6)  
+
+brain-calc: [![asciicast](https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF.svg)](https://asciinema.org/a/kphhjcR9Sq1tfth9HXKO8DSdF)  
+
+brain-gcd: [![asciicast](https://asciinema.org/a/ibIScbV2diJ10DbZVZXtmYgP1.svg)](https://asciinema.org/a/ibIScbV2diJ10DbZVZXtmYgP1)  
+
+brain-progression: [![asciicast](https://asciinema.org/a/Ycf8Pzy9SAKnMP9vOcMLBTSrk.svg)](https://asciinema.org/a/Ycf8Pzy9SAKnMP9vOcMLBTSrk)  
+
+brain-prime: [![asciicast](https://asciinema.org/a/hwE2VBrs0tfKhtWMEZCPIuqY7.svg)](https://asciinema.org/a/hwE2VBrs0tfKhtWMEZCPIuqY7)  
+
