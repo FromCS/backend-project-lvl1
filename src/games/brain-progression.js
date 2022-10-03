@@ -3,20 +3,20 @@ import getRandomNumber from '../utils.js';
 
 const progRules = 'What number is missing in the progression?';
 
-const createRandomProg = () => {
-  const progressionLength = 10;
-  const firstNumber = getRandomNumber(2, 100);
-  const progression = [firstNumber];
-  const randomIncreaseNumber = getRandomNumber(2, 20);
-  for (let i = 1; i < progressionLength; i += 1) {
-    progression.push(progression[i - 1] + randomIncreaseNumber);
-  }
+const progressionLength = 10;
 
+const createProg = (num, increaseNum, progLength) => {
+  const progression = [num];
+  for (let i = 1; i < progLength; i += 1) {
+    progression.push(progression[i - 1] + increaseNum);
+  }
   return progression;
 };
 
 const generateProgRound = () => {
-  const progression = createRandomProg();
+  const randomNum = getRandomNumber(2, 100);
+  const randomIncreaseNum = getRandomNumber(2, 20);
+  const progression = createProg(randomNum, randomIncreaseNum, progressionLength);
   const randomIndex = getRandomNumber(0, progression.length - 1);
   const answer = String(progression[randomIndex]);
   progression[randomIndex] = '..';

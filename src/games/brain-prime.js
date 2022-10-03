@@ -3,15 +3,19 @@ import getRandomNumber from '../utils.js';
 
 const primeRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generatePrimeRound = () => {
-  const question = getRandomNumber(2, 100);
+const isPrime = (number) => {
   const divisors = [];
-  for (let i = question; i >= 1; i -= 1) {
-    if (question % i === 0) {
+  for (let i = number; i >= 1; i -= 1) {
+    if (number % i === 0) {
       divisors.push(i);
     }
   }
-  const answer = (divisors.length === 2) ? 'yes' : 'no';
+  return divisors.length === 2;
+};
+
+const generatePrimeRound = () => {
+  const question = getRandomNumber(2, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 

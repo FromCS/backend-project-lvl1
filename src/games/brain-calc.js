@@ -3,27 +3,32 @@ import getRandomNumber from '../utils.js';
 
 const calcRules = 'What is the result of the expression?';
 
+const operations = ['+', '-', '*'];
+
 const getExpressionResult = (firstNumber, operation, secondNumber) => {
   switch (operation) {
     case '+':
-      return Number(firstNumber) + Number(secondNumber);
+      return firstNumber + secondNumber;
 
     case '-':
-      return Number(firstNumber) - Number(secondNumber);
+      return firstNumber - secondNumber;
+
+    case '*':
+      return firstNumber * secondNumber;
 
     default:
-      return Number(firstNumber) * Number(secondNumber);
+      throw new Error(`Operation ${operation} - doesn't supported`);
   }
 };
 
 const generateCalcRound = () => {
-  const operations = ['+', '-', '*'];
   const operation = operations[getRandomNumber(0, operations.length - 1)];
-  const operands = [getRandomNumber(2, 25), getRandomNumber(2, 25)];
-  const expression = `${operands[0]} ${operation} ${operands[1]}`;
-  const expressionResult = (getExpressionResult(operands[0], operation, operands[1]));
+  const firstNum = getRandomNumber(2, 25);
+  const secondNum = getRandomNumber(2, 25);
+  const question = `${firstNum} ${operation} ${secondNum}`;
+  const expressionResult = (getExpressionResult(firstNum, operation, secondNum));
   const answer = String(expressionResult);
-  return [expression, answer];
+  return [question, answer];
 };
 
 const launchBrainCalc = () => {
